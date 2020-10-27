@@ -44,8 +44,22 @@
 				height: 100%;
 				top: 0;
 				left: 0;
-				background-color: #000220;
+				background-color: black;
+				display: none;
 			}
+
+			.wait {
+				color: white;
+		    max-width: 300px;
+				font-family: monospace;
+				font-size: 24px;
+				text-align: center;
+		    margin: auto;
+		    position: relative;
+		    top: 50%;
+		    transform: translateY(-50%);
+			}
+
 		</style>
 	</head>
 	<body>
@@ -60,10 +74,13 @@
 			</div>
 		</div>
 		<div class="pro" id="pro">
-
+				<div class="wait">
+						LOADING ...
+				</div>
 		</div>
 		<input type="file" accept=".json" name="file" onclick="" id="fileforclick" onchange="saveSpaceEthernalScores(this.files)" hidden>
 		<script>var $ = {};</script>
+		<script src="https://unpkg.com/arweave/bundles/web.bundle.min.js"></script>
 		<script src="js/leaderboard.js"></script>
 		<script src="js/jsfxr.js"></script>
 		<script src="js/util.js"></script>
